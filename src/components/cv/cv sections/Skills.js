@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCirclePlus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 import {useDispatch} from "react-redux"
@@ -39,12 +39,12 @@ function Cvskills() {
 
   return (
     <>
-      <section className="CV-section p-3 cv-form-rounded">
+      <section className="CV-section p-3 ">
         <div className="col-12 text-light p-0 px-lg-3">
-          <form className="cv-form row g-3" id="cvFormSkills">
+          <form className="cv-form row g-3 " id="cvFormSkills">
             <h5 className="mb-4 text-capitalize">Skills</h5>
 
-            <div className="container-fluid skills-ct">
+            <div className="container-fluid skills-ct cv-form-rounded">
               <div className="row">
                 <div className="col-10">
                   <div className="container skills-input-ct">
@@ -79,7 +79,7 @@ function Cvskills() {
                       type="button"
                       className="fa-solid fa-circle-plus add-icon"
                       style={{ color: "#bf9b30" }}
-                      icon={faPlus}
+                      icon={faCirclePlus}
                     />
                   </div>
                 </div>

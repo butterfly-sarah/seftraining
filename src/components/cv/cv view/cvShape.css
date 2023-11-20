@@ -40,7 +40,7 @@ padding: 20px 0px;
         
       }
       .steper-number{
-        border: 1px solid yellow;
+        border: 1px solid #bf9b30;
         padding: 1rem 1.4rem;
         margin: 0 15px;
         border-radius: 10px;
@@ -66,6 +66,16 @@ padding: 20px 0px;
     padding: 1rem;
     /* margin: 30px 0px; */
     /* padding: 30px; */
+}
+.cv-progress input{
+    background-color: rgba(83, 83, 83, 0.4);
+    color: white;
+}
+.cv-progress input:focus{
+    outline: none;
+    border: none;
+    background-color: rgba(83, 83, 83, 0.4);
+    color: white;
 }
 .cv-progress-item{
     height: 100%;
@@ -135,11 +145,14 @@ padding: 20px 0px;
             
         }
         #previusBtn{
+            border: none;
             background-color: #9d9d9d;
             color: #fff;
+            width: 10%;
         }
 
         #nextBtn{
+            width: 10%;
             background-color: #bf9b30;
             color: #FFE;
         }

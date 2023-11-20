@@ -1,4 +1,4 @@
-import { faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faCirclePlus, faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import Dragdrop from "../../Drag drop/Dragdrop";
@@ -46,7 +46,7 @@ function CvExperience() {
   };
 
   return (
-    <section className="CV-section p-3 cv-form-rounded">
+    <section className="CV-section p-3 ">
       <form onSubmit={handleSubmit}>
         <div className="ctForAdd col-12 text-light p-0 px-lg-3">
           <h5 className="mb-4 mb-lg-5">Experience</h5>
@@ -142,7 +142,7 @@ function CvExperience() {
                 type="button"
                 className="fa-solid fa-circle-plus add-icon add-icon-move"
                 style={{ color: "#bf9b30" }}
-                icon={faPlus}
+                icon={faCirclePlus}
               />
             </div>
           </div>

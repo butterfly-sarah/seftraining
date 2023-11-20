@@ -20,7 +20,7 @@ body::before{
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: #292929b9;
+  background-color: #1a1919f1;
   z-index: -1;
 }
 a{

@@ -13,13 +13,14 @@ function Cvabout() {
     dispatch(addAboutData(about)); // Dispatch action to update Redux state
   };  return (
     <>
-      <section className=" CV-section p-3 cv-form-rounded">
+      <section className=" CV-section p-3 ">
           <div className="col-12  p-0 px-lg-3">
             <form className="cv-form row g-3">
               <div className="col-12 text-light">
                 <label for="inputAbout" className="form-label">
                   About
                 </label>
+                <div className="cv-form-rounded">
                 <textarea
                   className="form-control col-12 w-100 cv-summary-about"
                   id="inputAbout"
@@ -28,6 +29,7 @@ function Cvabout() {
                   value={about}
                   onChange={handleAboutChange}
                 ></textarea>
+                </div>
               </div>
             </form>
           </div>

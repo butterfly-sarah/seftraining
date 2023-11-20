@@ -1,4 +1,4 @@
-import { faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faCirclePlus, faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -125,7 +125,7 @@ function Cveducation() {
 
   return (
     <>
-      <section className="CV-section p-3 cv-form-rounded">
+      <section className="CV-section p-3 ">
         <div className="ctForAdd col-12 text-light p-0 px-lg-3">
           <div className="waay">
             <h5 className="mb-4 mb-lg-5">Education</h5>
@@ -133,7 +133,7 @@ function Cveducation() {
             <div className="icons-div">
               <FontAwesomeIcon
                 onClick={handleMinusDiv}
-                className="fa-regular fa-trash-can remove-icon remove-icon-move"
+                className="fa-regular fa-trash-can remove-icon remove-icn-move"
                 style={{ color: "#bf9b30" }}
                 icon={faTrashCan}
               />
@@ -146,7 +146,7 @@ function Cveducation() {
                 type="button"
                 className="fa-solid fa-circle-plus add-icon add-icon-move"
                 style={{ color: "#bf9b30" }}
-                icon={faPlus}
+                icon={faCirclePlus}
               />
             </div>
           </div>

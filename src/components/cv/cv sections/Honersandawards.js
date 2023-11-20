@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { faPlus, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCirclePlus, faPlus, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { addAwards } from "../../redux/reducers/cvDataSlice";
@@ -39,8 +39,9 @@ function HonorsAndAwards() {
   };
 
   const renderAwards = awardsList.map((award, index) => (
-    <form className="cv-form row g-3" key={index}>
-      <h5 className="mb-4 mb-lg-5">Honors And Awards</h5>
+    <form className="cv-form row g-3 mt-1" key={index}>
+      
+      <div className="row cv-form-rounded">
       <div className="col-8 form-control-ct">
         <label htmlFor={`awardName${index}`} className="form-label">
           Award name
@@ -87,14 +88,16 @@ function HonorsAndAwards() {
           icon={faTrashAlt}
         />
       </div>
+      </div>
     </form>
   ));
 
   // Return JSX
   return (
     <>
-      <section className="CV-section p-3 cv-form-rounded">
+      <section className="CV-section p-3">
         <div className="col-12 text-light p-0 px-lg-3">
+        <h5 className="mb-4 mb-lg-5">Honors And Awards</h5>
           {renderAwards}
           <div className="row">
             <div className="col-12 col-md-6 icons-div">
@@ -103,7 +106,7 @@ function HonorsAndAwards() {
                 type="button"
                 className="fa-solid fa-circle-plus add-icon add-icon-move"
                 style={{ color: "#bf9b30", cursor: "pointer" }}
-                icon={faPlus}
+                icon={faCirclePlus}
               />
             </div>
           </div>

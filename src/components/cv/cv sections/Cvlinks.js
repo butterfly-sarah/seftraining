@@ -1,4 +1,4 @@
-import { faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faCirclePlus, faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -39,10 +39,10 @@ function Cvlinks() {
 
   return (
     <>
-      <section className="CV-section p-3 cv-form-rounded">
+      <section className="CV-section p-3 ">
         <div className="col-12 p-0 px-lg-3">
-          <h5 className="mb-4 text-capitalize">Links</h5>
-          <form className="cv-form row g-3">
+          <h5 className="mb-4 text-capitalize text-light">Links</h5>
+          <form className="cv-form row g-3 cv-form-rounded pt-5">
             <div className="container-fluid links-ct add-ct">
               <div className="row">
                 <div className="col-12 text-light col-md-11">
@@ -93,9 +93,9 @@ function Cvlinks() {
                     <FontAwesomeIcon
                       onClick={handlePlusDiv}
                       type="button"
-                      className="fa-solid fa-circle-plus add-icon add-icon-move"
+                      className="fa-solid fa-circle-plus add-icon add-icon-move fs-4"
                       style={{ color: "#bf9b30" }}
-                      icon={faPlus}
+                      icon={faCirclePlus}
                     />
                   </div>
                 </div>

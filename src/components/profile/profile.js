@@ -63,7 +63,7 @@ export default function Profile() {
             
         </div>  
     </div>
-    <div className='profiledata mt-5 position-relative'>
+    <div className='profiledata mt-5 position-relative' style={{background:"none"}}>
     <div class="row gy-2 gx-5 gy-md-0 p-5">
             <div class="col-sm-12 col-md-3 profilefirst">
                 <form>

@@ -44,8 +44,7 @@ function CvShape(){
 
 
     return(
-        <section class="main-sec mb-3">
-        <div class="overlay"></div>
+        <section class="main-sec">
         <div class="container">
             <div class="">
                 <Title title={"create cv"}/>
@@ -53,42 +52,42 @@ function CvShape(){
 
             <div class="steper-sec">
                 <div class="steper-title">
-                    <h2>Customize your cv</h2>
+                    <h2 style={{fontWeight:"700"}}>Customize your cv</h2>
                     <p>Here you can create your CV by answering questions and getting it ready for download or applying to jobs through the platform.</p>
                 </div>
                  <div class="test container d-flex" ref={containerSteps}>
 
                     <div class="item item1  col-lg-3  m-1">
-                        <div class={formstepnum >= 0 ? "steper-number progress-step-active":"steper-number "}>1</div>
-                        <div class="steper-info">main information</div>
+                        <div class={formstepnum >= 0 ? "steper-number progress-step-active":"steper-number "} style={{fontWeight:"700"}}>1</div>
+                        <div class="steper-info text-uppercase">main information</div>
                     </div>
                     <div class="item item2 col-lg-3  m-1">
-                        <div class={formstepnum >= 1 ? "steper-number progress-step-active":"steper-number "}>2</div>
-                        <div class="steper-info">summary</div>
+                        <div class={formstepnum >= 1 ? "steper-number progress-step-active":"steper-number "} style={{fontWeight:"700"}}>2</div>
+                        <div class="steper-info text-uppercase">summary</div>
                     </div>
                     <div class="item item3 col-lg-3 m-1">
-                        <div class={formstepnum >= 2 ? "steper-number progress-step-active":"steper-number "}>3</div>
-                        <div class="steper-info">skills</div>
+                        <div class={formstepnum >= 2 ? "steper-number progress-step-active":"steper-number "} style={{fontWeight:"700"}}>3</div>
+                        <div class="steper-info text-uppercase">Skills</div>
                     </div>
                     <div class="item  col-lg-3 m-1"  >
-                        <div class={formstepnum >= 3 ? "steper-number progress-step-active":"steper-number "}>4</div>
-                        <div class="steper-info">Experience</div>
+                        <div class={formstepnum >= 3 ? "steper-number progress-step-active":"steper-number "} style={{fontWeight:"700"}}>4</div>
+                        <div class="steper-info text-uppercase">Experience</div>
                     </div>
                     <div class="item  col-lg-3  m-1">
-                        <div class={formstepnum >= 4 ? "steper-number progress-step-active":"steper-number "}>5</div>
-                        <div class="steper-info">Education</div>
+                        <div class={formstepnum >= 4 ? "steper-number progress-step-active":"steper-number "} style={{fontWeight:"700"}}>5</div>
+                        <div class="steper-info text-uppercase">Education</div>
                     </div>
                     <div class="item  col-lg-3  m-1">
-                        <div class={formstepnum >= 5 ? "steper-number progress-step-active":"steper-number "}>6</div>
-                        <div class="steper-info">Honers & Awards</div>
+                        <div class={formstepnum >= 5 ? "steper-number progress-step-active":"steper-number "} style={{fontWeight:"700"}}>6</div>
+                        <div class="steper-info text-uppercase">Honers & Awards</div>
                     </div>
                     <div class="item  col-lg-3  m-1">
-                        <div class={formstepnum >= 6 ? "steper-number progress-step-active":"steper-number "}>7</div>
-                        <div class="steper-info">Hobbies & Interests</div>
+                        <div class={formstepnum >= 6 ? "steper-number progress-step-active":"steper-number "} style={{fontWeight:"700"}}>7</div>
+                        <div class="steper-info text-uppercase">Hobbies & Interests</div>
                     </div>
                     <div class="item item8 col-lg-3  m-1">
-                        <div class={formstepnum >= 7 ? "steper-number progress-step-active":"steper-number "}>8</div>
-                        <div class="steper-info">links</div>
+                        <div class={formstepnum >= 7 ? "steper-number progress-step-active":"steper-number "} style={{fontWeight:"700"}}>8</div>
+                        <div class="steper-info text-uppercase">Links</div>
                     </div>
                     
                  </div>
@@ -118,8 +117,8 @@ function CvShape(){
 
             </div>
                  <div class="form-group col-xs-11 col-lg d-flex gap-3  ">
-                    <button id="nextBtn" onClick={handleNext} class={(formstepnum + 1) === 8 ? "btn disabled next-btn ps-4 pe-4 p-3" : " btn ps-4 pe-4 p-3 "} >{nextBtn}</button>
-                    <button id="previusBtn" onClick={handleBack} class={(formstepnum + 1) === 1 ? "btn disabled ps-4 pe-4 p-3" : " btn ps-4 pe-4 p-3 "}>Back</button>
+                    <button id="nextBtn" onClick={handleNext} class={(formstepnum + 1) === 8 ? "btn disabled next-btn px-4" : " btn px-4"} >{nextBtn}</button>
+                    <button id="previusBtn" onClick={handleBack} class={(formstepnum + 1) === 1 ? "btn disabled px-4" : " btn px-4"}>Back</button>
 
                  </div>
 

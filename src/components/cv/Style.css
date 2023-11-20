@@ -117,12 +117,18 @@ i{
 }
 .remove-icon-move{
     position: absolute;
-    margin-top: 15px   ;
+    margin-top: 30px   ;
     cursor: pointer;
    
 }
+.remove-icn-move{
+    position: absolute;
+    margin-top: -35px;
+    cursor: pointer;
+}
 .add-icon-move{
-    margin: 15px;
+    margin-top: -35px;
+    margin-left: 10px;
     position: absolute;
 }
 .remove-icon{
@@ -139,6 +145,7 @@ i{
    .cv-form-rounded{
     border:2px dashed #bf9b30!important;
     padding: 1rem!important;
+    margin-bottom: 50px;
    }
    @media (min-width: 992px){
     .cv-form-rounded{

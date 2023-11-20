@@ -1,19 +1,12 @@
 
 :root {
     --section-color:#eff7fa;
-    --dark-color: rgba(0, 0, 0, .4);;
+    --dark-color: rgba(0, 0, 0, .4);
 }
 
 
 
-.profileoverlay{
-    background-color: #292929b9;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
+
 .pen{
     position: absolute;
     display: inline-block;

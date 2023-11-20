@@ -1,4 +1,4 @@
-import { faPlus, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faCirclePlus, faPlus, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -32,13 +32,15 @@ function HobbiesAndInterests() {
 
   return (
     <>
-      <section className="CV-section p-3 cv-form-rounded">
+      <section className="CV-section p-3 ">
         <div className="col-12 text-light p-0 px-lg-3">
           <form className="cv-form row g-3">
             <h5 className="mb-4 text-capitalize">Hobbies And Interests</h5>
 
-            <div className="container-fluid hobbies-ct">
+            <div className="container-fluid hobbies-ct cv-form-rounded">
+              
               <div className="row">
+                
                 <div className="col-10">
                   <div className="container hobbies-input-ct" id="hobbiesInputCt">
                     {hobbiesList.map((value, index) => (
@@ -63,19 +65,20 @@ function HobbiesAndInterests() {
                       </div>
                     ))}
                   </div>
-                </div>
-
-                <div className="col-2">
+                  <div className="col-2 fs-4">
                   <div className="hobbies-input-add">
                     <FontAwesomeIcon
                       type="button"
                       onClick={handleAddHobbies}
-                      className="fa-solid fa-circle-plus add-icon add-icon-move"
-                      style={{ color: "#bf9b30", cursor: "pointer" }}
-                      icon={faPlus}
+                      className="fa-solid fa-circle-plus add-icon "
+                      style={{ color: "#bf9b30", cursor: "pointer"}}
+                      icon={faCirclePlus}
                     />
                   </div>
                 </div>
+                </div>
+
+                
               </div>
             </div>
           </form>
