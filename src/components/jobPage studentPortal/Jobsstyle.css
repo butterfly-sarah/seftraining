@@ -135,7 +135,7 @@
 .spn
 {
     font-size: 35px;
-    letter-spacing: 5px;
+    font-family: 'emoji';
     color: red;
     letter-spacing: 0cap;
 }

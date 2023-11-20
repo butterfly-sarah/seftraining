@@ -6,6 +6,7 @@ import './Jobsstyle.css'
 import Title from "../title/title";
 import Dragdrop from "../Drag drop/Dragdrop";
 import { useDispatch } from "react-redux";
+import Footer from "../footer/Footer";
 import { addApplication } from "../redux/reducers/ApplicationSlice";
 export default function FindJobs(){
     const jobs = [
@@ -187,7 +188,6 @@ return(
             
         <div class="container filter-side d-flex bd-highlight p-0">
           <div className={menu?"filter":"filter display-none"}>
-            {/* //className="position-absolute" */}
             <aside class="job-filter pb-5">
               <div class="filter-head d-flex  p-2 align-items-baseline rounded">
               <h2 class="text-white mr-5 fs-5">Filters</h2>
@@ -378,7 +378,7 @@ href='#'>
                       <Dragdrop onFileDrop={handleFileDrop}/>
                     </div>
                     <div className="col-12 mt-5 d-flex justify-content-end">
-                      <button class="cancel">Cancel</button>
+                      <button class="cancel" onClick={()=>{setForm(false);setDetails(false)}}>Cancel</button>
                       <button class="submit" onClick={handleSubmit}>Submit</button>
                     </div>
                   </div>
@@ -390,6 +390,7 @@ href='#'>
           </div>
           </div>
     </div>
+    <Footer/>
     </>
 )
 }

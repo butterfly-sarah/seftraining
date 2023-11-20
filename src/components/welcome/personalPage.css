@@ -17,12 +17,32 @@
     text-align: center;
     
   }
+  .exams .view{
+    background: #bf9b30;
+    transition: 0.5s;
+  }
+  .exams .view:hover{
+    transition: 0.5s;
+    background: none;
+    border: 1px solid #bf9b30;
+  }
   /* //////////////// */
   .sec3_img{
     width: 100%;
     height: 100%;
     opacity: 0.8;
-  
+    border-radius: 1rem 0rem 0rem 1rem;
+  }
+  .img_rel::after{
+    position: absolute;
+    border-radius: 0rem 0rem 0rem 1rem;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    z-index: 1;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgb(45, 45, 45));
   }
   .parent_top_courses{
     position: relative;
@@ -32,6 +52,8 @@
     left: 20px;
     bottom: -10px;
     font-size: 20px;
+    font-weight: 700;
+    z-index: 2;
   }
   .right_courses{
     position: absolute;
