@@ -6,10 +6,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, Route, Routes } from 'react-router-dom';
 import ShowNews from './showNew';
 import Footer from '../footer/Footer';
-function News(){
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
+import CustomUI from './../alert/CustomUi';
+import { useSelector } from 'react-redux';
 
+
+const submit1 = () => {
+  console.log("//");
+  confirmAlert({
+    customUI: ({ onClose }) => {
+      return (
+        <CustomUI onClose={onClose}/>  
+      );
+    }
+  });
+};
+function News(){
+  const users = useSelector(state=>state.users)
+const user = users.filter(user=>user?.online == true)[0]
     return(
       <>
+      {user?.online?"":submit1()}
         <div class="contin mt-3">
         <div class="child-contin">
           <div class="container" style={{fontFamily:"sans-serif"}}>

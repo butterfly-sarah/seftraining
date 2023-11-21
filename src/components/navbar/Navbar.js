@@ -69,7 +69,7 @@ const Navbar =()=>{
   <img src={logo} className="navbar-brand d-block " alt="..."/>
     
     <button className="navbar-toggler" onClick={handleNav} type="button" >
-    <FontAwesomeIcon icon={faBars} className="icon-navbar text-warning" />
+    <FontAwesomeIcon icon={faBars} className="icon-navbar " />
     </button>
     <div className={nav ? "collapse navbar-collapse show bg-black p-3" :"collapse navbar-collapse"} id="navbarSupportedContent">
       <ul className="navbar-nav lh-base justify-content-center d-flex align-items-center  mb-lg-0 mt-3">
