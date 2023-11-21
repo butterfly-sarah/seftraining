@@ -3,7 +3,7 @@ import Navbar from './components/navbar/Navbar';
 import News from './components/news/news';
 import LoginComponent from './components/login/Login';
 import Scroll from './components/scroll/scroll';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import ShowNews from './components/news/showNew';
 import Articles from './components/admin Panel/articles/article';
 import AddJob from './components/admin Panel/add job/AddJob';
