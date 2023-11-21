@@ -12,13 +12,11 @@
     --background-input: #ffffff1e ;
   }
 .footer-component{
-    background-color:var(--Red);
-    padding: 20px 0 50px 0;
+    padding-top: 20px;
     overflow: hidden;
 }
 .footer-component .footer-logo
-{width: 132px;
-    height: 132px;}
+{width: 90px;}
 .footer-component .footer-title h3
 {font-size: var(--p-24);
     margin-bottom: 20px;}
@@ -28,7 +26,7 @@
     text-decoration: none;
     margin-right: 20px;
     transition: var(--transition-1);
-    margin-bottom: 5px;
+    font-size: small;
 }
 
 .footer-component .social-icon:hover{

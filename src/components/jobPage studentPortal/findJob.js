@@ -260,7 +260,7 @@ return(
             jobData.map((job,index)=>(
               <div class="div1 m-md-3"> 
                 <div class="dd-info row">
-                <div class="spn col-1 p-0 d-flex justify-content-center"><span style={{fontSize:"larger",fontWeight:"900"}}>≡</span>IT</div>
+                <div class="spn col-1 p-0 d-flex justify-content-center"><span style={{fontSize:"larger",fontWeight:"900",fontFamily:"Cambria,Cochin,Georgia,Times,Times New Roman,serif"}}>≡</span>IT</div>
                 <div className="col-md-8 col-sm-12 p-0">
                 <h2>{job.title}</h2>
                 <p>IT solution , {job.location}</p>
@@ -319,7 +319,7 @@ href='#'>
             { details&&!form&&
                 <div class="div1 m-md-3"> 
                 <div class="dd-info row">
-                <div class="spn col-1 p-0 d-flex justify-content-center"><span style={{fontSize:"larger",fontWeight:"900"}}>≡</span>IT</div>
+                <div class="spn col-1 p-0 d-flex justify-content-center"><span style={{fontSize:"larger",fontWeight:"900",fontFamily:"Cambria,Cochin,Georgia,Times,Times New Roman,serif"}}>≡</span>IT</div>
                 <div className="col-md-8 col-sm-12 p-0">
                 <h2>{currentJob.title}</h2>
                 <p>IT solution , {currentJob.location}</p>
@@ -349,7 +349,7 @@ href='#'>
                 { form&&
                 <div class="view-details3 div1 m-md-3">
                   <div class="dd-info row">
-                <div class="spn col-1 p-0 d-flex justify-content-center"><span style={{fontSize:"larger",fontWeight:"900"}}>≡</span>IT</div>
+                <div class="spn col-1 p-0 d-flex justify-content-center"><span style={{fontSize:"larger",fontWeight:"900",fontFamily:"Cambria,Cochin,Georgia,Times,Times New Roman,serif"}}>≡</span>IT</div>
                 <div className="col-md-8 col-sm-12 p-0">
                 <h2>{currentJob.title}</h2>
                 <p>IT solution , {currentJob.location}</p>
@@ -358,7 +358,7 @@ href='#'>
                 <p id="pi"> <FontAwesomeIcon icon={faLocationDot} style={{color: "#bf9b30"}} /> On Site</p>
                 </div>
               </div>
-              <h1>Balqees Hamdi Sabir</h1>
+              <h2>Balqees Hamdi Sabir</h2>
               <p>Computer science, international islamic university</p>
                 <form onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
                  <div class="form-group3 row">

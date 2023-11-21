@@ -56,7 +56,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='footer-last-sec mt-5 position-relative'>
+                <div className='footer-last-sec position-relative'>
                     <div className='row mt-4'>
                         <div className='col-md-6 col-12 d-flex justify-content-md-start justify-content-center '>
                             <p className='copy-right text-white text-uppercase'>@2023 Egypt, All Rights Reserved</p>
