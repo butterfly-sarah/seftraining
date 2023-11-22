@@ -66,3 +66,15 @@
   .left_courses2{
     font-size: 30px;
   }
+  @media(max-width:450px){
+    .parent_top_courses{
+      position: relative;
+      padding: 50px;
+    }
+    .sec3_img{
+      border-radius: 0rem;
+    }
+    .img_rel::after{
+      border-radius: 0rem;
+    }
+  }

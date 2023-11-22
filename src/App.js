@@ -43,6 +43,7 @@ function App() {
       {/* <PersonalPage/> */}
       {/* <AddUser/> */}
     </div>
+    
        <Routes>
        <Route path='/' element={<News/>}/>
        <Route path='/showNews' element={<ShowNews/>}/>

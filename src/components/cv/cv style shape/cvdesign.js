@@ -17,7 +17,7 @@ const companyLogo = cvData.companyLogo;
 console.log(cvData)
 console.log(education)
     return(
-        <div class="information-container w-100 ">
+        <div class="information-container w-100">
             <div class="row mx-0 w-100">
                 <div class="col-5 " style={{backgroundColor: "#233a5f"}}>
                     <div>

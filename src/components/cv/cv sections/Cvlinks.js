@@ -42,7 +42,7 @@ function Cvlinks() {
       <section className="CV-section p-3 ">
         <div className="col-12 p-0 px-lg-3">
           <h5 className="mb-4 text-capitalize text-light">Links</h5>
-          <form className="cv-form row g-3 cv-form-rounded pt-5">
+          <form className="cv-form row g-3 cv-form-rounded pt-5" id="cv-form-rounded">
             <div className="container-fluid links-ct add-ct">
               <div className="row">
                 <div className="col-12 text-light col-md-11">
@@ -79,6 +79,7 @@ function Cvlinks() {
                           <FontAwesomeIcon
                             onClick={handleMinusDiv}
                             className="mt-4 fa-regular fa-trash-can remove-icon remove-icon-move"
+                            id="remove-icon-move"
                             style={{ color: "#bf9b30" }}
                             icon={faTrashCan}
                           />
@@ -94,6 +95,7 @@ function Cvlinks() {
                       onClick={handlePlusDiv}
                       type="button"
                       className="fa-solid fa-circle-plus add-icon add-icon-move fs-4"
+                      id="add-icon-move"
                       style={{ color: "#bf9b30" }}
                       icon={faCirclePlus}
                     />

@@ -110,7 +110,7 @@ function CvShape(){
 
                     {/* <div class="drag-drop"></div> */}
                     </div>
-                    <div class="col-xs-12 order-xs-12 col-lg-6">
+                    <div class="col-xs-12 order-xs-12 col-lg-6 phone-none">
                         <CvDesign/>
                     </div>
                 </div>

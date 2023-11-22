@@ -30,15 +30,15 @@ function PersonalPage(){
         </div>
         
         
-        <div class="course container p-3 px-5 flex-wrap  justify-content-between  align-items-center  d-flex text-uppercase">
+        <div class="course container p-3 px-1 px-sm-5 flex-wrap  justify-content-between  align-items-center  d-flex text-uppercase">
             <h3 class="text-white  fs-5  col-xs-12 mb-0"> <span class="badge p-4 me-2  text-white text-uppercase"
-                style={{border:' 1px solid #bf9b30', fontSize: "25px"}} >1</span>upcoming exams</h3>
+                style={{border:' 1px solid #bf9b30', fontSize: "23px"}} >1</span>upcoming exams</h3>
 
             <h3 class="text-white  fs-5  col-xs-12 mb-0"> <span class="badge p-4 me-2  text-white text-uppercase "
-            style={{border:' 1px solid #bf9b30', fontSize:' 25px' }}>4</span>ongoing courses</h3>
+            style={{border:' 1px solid #bf9b30', fontSize:' 23px' }}>4</span>ongoing courses</h3>
 
             <h3 class="text-white  fs-5  col-xs-12 mb-0"> <span class="badge p-4 me-2  text-white text-uppercase "
-            style={{border:' 1px solid #bf9b30', fontSize:' 25px' }}>2</span>completed courses</h3>
+            style={{border:' 1px solid #bf9b30', fontSize:' 23px' }}>2</span>completed courses</h3>
 
         </div> 
     </div> 

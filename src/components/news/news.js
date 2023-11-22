@@ -3,21 +3,21 @@ import 'bootstrap/dist/css/bootstrap.css';
 import img from '../../assest/oooo.jpg';
 import { faChevronRight, faClock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, MemoryRouter, Route, Routes } from 'react-router-dom';
 import ShowNews from './showNew';
 import Footer from '../footer/Footer';
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import CustomUI from './../alert/CustomUi';
 import { useSelector } from 'react-redux';
-
+import LoginComponent from './../login/Login';
 
 const submit1 = () => {
   console.log("//");
   confirmAlert({
     customUI: ({ onClose }) => {
       return (
-        <CustomUI onClose={onClose}/>  
+        <CustomUI onClose={onClose}/>
       );
     }
   });
