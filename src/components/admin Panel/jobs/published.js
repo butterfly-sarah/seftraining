@@ -7,6 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 function Jobs(){
 
   const jobs = useSelector(state=>state.jobs)
+  
   const dispatch = useDispatch()
   // useEffect(()=>{
   //     dispatch(fetchCourses())
@@ -72,12 +73,12 @@ function Jobs(){
           </div>)
           : <div class="article-sec  ">
           <Link to="/adminPanel/addJobs">
-          <button className="btn color-yellow ps-4 m-2 d-block pe-4 p-2 ms-auto" style={{transform:'translateY(-50px)',border:"1px solid #bf9b30"}}> Create new job</button>
+          <button className="btn btn-outline-warning ps-4 m-2 d-block pe-4 p-2 ms-auto" style={{transform:'translateY(-50px)'}}> Create new job</button>
           </Link>
               <div class="article-search d-lg-flex justify-content-lg-between">
                 <h4 className="text-light">Jobs</h4>
                 <div class="search-div">
-                  <input type="text" placeholder="Search For Jobs" style={{padding:"5px",borderRadius:"5px"}}/>
+                  <input type="text" placeholder="Search For Jops"/>
                   <i class="fas fa-search"></i>
                 </div>
               </div>
@@ -106,10 +107,10 @@ function Jobs(){
                           <td>{job.application}</td>
                           <td>
                           <Link href="">
-                            <FontAwesomeIcon icon={faPenToSquare} className='color-yellow' />
+                            <FontAwesomeIcon icon={faPenToSquare} className='text-warning' />
                           </Link> 
                           <Link href="" onClick={()=>dispatch(removeJob(job))}>
-                            <FontAwesomeIcon icon={faTrashCan} className='color-yellow' />
+                            <FontAwesomeIcon icon={faTrashCan} className='text-warning' />
                           </Link>
                           </td>
                     </tr>

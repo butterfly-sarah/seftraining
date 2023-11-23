@@ -3,7 +3,7 @@ import Navbar from './components/navbar/Navbar';
 import News from './components/news/news';
 import LoginComponent from './components/login/Login';
 import Scroll from './components/scroll/scroll';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ShowNews from './components/news/showNew';
 import Articles from './components/admin Panel/articles/article';
 import AddJob from './components/admin Panel/add job/AddJob';
@@ -19,9 +19,15 @@ import AddArticles from './components/admin Panel/add articles/AddArtciles';
 import FindJobs from './components/jobPage studentPortal/findJob';
 import Applications from './components/admin Panel/application/application';
 import UserStudents from './components/admin Panel/users-students/UsersStudents';
+import UserInstructors from './components/admin Panel/users-students/userInstructor';
+import UserAdmins from './components/admin Panel/users-students/usersAdmin';
+import PublishedArticles from './components/admin Panel/articles/saved';
+import DraftArticles from './components/admin Panel/articles/draft';
 import Users from './components/admin Panel/users/Users';
 import AddCourses from './components/admin Panel/add courses/addCourses';
 import Courses from './components/admin Panel/courses/Courses';
+import PublishedCourses from './components/admin Panel/courses/saved';
+import DraftCourses from './components/admin Panel/courses/draft';
 import AddCertificateDetails from './components/admin Panel/add certificate/Add_Certificate_Details';
 import { useSelector } from 'react-redux';
 import Jobs from './components/admin Panel/jobs/Jobs';
@@ -43,7 +49,6 @@ function App() {
       {/* <PersonalPage/> */}
       {/* <AddUser/> */}
     </div>
-    
        <Routes>
        <Route path='/' element={<News/>}/>
        <Route path='/showNews' element={<ShowNews/>}/>
@@ -66,19 +71,24 @@ function App() {
         {user?.online &&user?.role === 'instructor' &&<Route path='/instructorPanel' element={<PersonalPage/>}/>}
 
         {user?.online &&user?.role === 'Admin' && (
-          <Route path='/adminPanel' element={<AdminPanel/>}>
-        <Route path="articles" element={<Articles />} />
+              <Route path='/adminPanel' element={<AdminPanel/>}>
+              <Route path="articles" element={<Articles />} />
               <Route
                 path="addarticles"
                 element={<AddArticles />}
               />
               <Route path="Jobbs" element={<Jobs />} />
+              <Route path="publishedarticles" element={<PublishedArticles />} />
+              <Route path="draftarticles" element={<DraftArticles />} />
               <Route path="addjobs" element={<AddJob />} />
               <Route
                 path="addcertificate"
                 element={<AddCertificateDetails />}
               />
               <Route path="courses" element={<Courses />} />
+              <Route path="publishedcourses" element={<PublishedCourses />} />
+              <Route path="coursedetails" element={<Coursedeatels />} />
+              <Route path="draftcourses" element={<DraftCourses />} />
               <Route path="addcourses" element={<AddCourses />} />
               <Route path="users" element={<Users />} />
               <Route path="addusers" element={<AddUser />} />
@@ -86,6 +96,14 @@ function App() {
               <Route
                 path="userstudents"
                 element={<UserStudents />}
+              />
+              <Route
+                path="userAdmins"
+                element={<UserAdmins />}
+              />
+              <Route
+                path="userInstructors"
+                element={<UserInstructors />}
               />
 
         </Route>

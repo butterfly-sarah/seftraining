@@ -36,10 +36,10 @@
     padding: 1.5rem;
     width: 100%!important;
 }
-input{
-background-color: #ffffff1e;
+input,textarea{
+background-color: #ffffff1e !important;
 border: 0!important;   
- color: #fffffff1;
+ color: #fffffff1 !important;
 }
 
 .upload-personal-photo{

@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import { removeCourse } from "../../redux/reducers/CourseSlice";
 import { useCallback, useEffect, useState } from "react";
 
-function Courses(){
+function DraftCourses(){
   const courses = useSelector(state=>state.courses)
+  const DraftCourses = courses.filter(course=>course.status === false)
   const dispatch = useDispatch()
   // useEffect(()=>{
   //     dispatch(fetchCourses())
@@ -42,7 +43,7 @@ function Courses(){
         <>
         {
         isMobile ?  (<div class="row m-0 mt-5 col-12" id="items" >
-        {courses?.map((course,index)=>(
+        {DraftCourses?.map((course,index)=>(
           <div class="col-12 text-light  " key={index} id="item" >
           <button className={course.status?"table_btn publish_btn":"bg-secondary table_btn text-light"}>
           {course.status ? "Active" : "inActive"}
@@ -83,13 +84,13 @@ function Courses(){
           <a class="btn row_btn col-12" href="#" role="button">Create New user</a>
         </div>)
         :<div class="article-sec  ">
-        <Link to="/adminPanel/addCourses">
-          <button className="btn color-yellow ps-4 m-2 d-block pe-4 p-2 ms-auto" style={{transform:'translateY(-50px)',border:"1px solid #bf9b30"}}> Create new course</button>
-          </Link>
-              <div class="user-search d-lg-flex justify-content-lg-between">
-                <h4 className="text-light">Courses</h4>
-                <div class="search-div">
-                  <input type="text" placeholder="Search For Jobs" style={{borderRadius:"5px",padding:"5px"}}/>
+        <Link to="/adminPanel/addCourses" >
+        <button className="btn color-yellow ps-4 m-2 d-block pe-4 p-2 ms-auto" style={{transform:'translateY(-50px)',border:"1px solid #bf9b30"}}> Create new course</button>
+        </Link>
+            <div class="article-search d-lg-flex justify-content-lg-between">
+              <h4 className="text-light">Courses</h4>
+              <div class="search-div">
+                <input type="text" placeholder="Search For Jobs" style={{padding:"5px",borderRadius:"5px"}}/>
                 <i class="fas fa-search"></i>
               </div>
             </div>
@@ -107,12 +108,12 @@ function Courses(){
               </tr>
                 </thead>
                 {
-                  courses?.map((course,index)=>(
+                  DraftCourses?.map((course,index)=>(
                   <tr key={index}>
                     <td>{course.courseName}</td>
-                    <td><Link to="/adminPanel/coursedetails"><button className={course.status?"":"bg-secondary text-light"}>
+                    <td><button className={course.status?"":"bg-secondary text-light"}>
                       {course.status?'open':"ended"}
-                      </button></Link></td>
+                      </button></td>
                     <td>{course.instructor}</td>
                     <td>{course.level}</td>
                     <td>{course.startDate}</td>
@@ -136,4 +137,4 @@ function Courses(){
         </>
     )
 }
-export default Courses;
+export default DraftCourses;

@@ -24,7 +24,7 @@ const Navbar =()=>{
   console.log(user);
   return(
       <>
-            <ul className="navbar-nav bg-dark text-light p-1 flex-wrap  ps-3 pe-3 d-flex justify-content-end position-relative gap-3 flex-row ms-auto" style={{zIndex:'566666666666'}}>
+            <ul className="navbar-nav bg-dark text-light p-1 flex-wrap  ps-3 pe-3 d-flex justify-content-end position-relative gap-3 flex-row ms-auto" style={{zIndex:'5'}}>
           {
             !user?.online && <li className="nav-item p-0">
             <Link className="nav-link  p-0" to="/login"  >LOGIN</Link>

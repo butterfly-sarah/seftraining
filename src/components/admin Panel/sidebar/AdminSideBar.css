@@ -3,13 +3,16 @@
     position: relative;
     color: white;
 }
+.color-yellow{
+    color: #bf9b30 !important;
+}
 .users-sec{
     background-color: rgba(0, 0, 0, .3);
     padding: 20px;
     border-radius: 5px;
 
 }
-.users-sec h5{
+.users-sec h2{
     background-color: rgba(0, 0, 0, .3);
     border-radius: 5px;
     font-size: 17px;
@@ -17,14 +20,7 @@
     font-weight: 500;
 
 }
-.users-sec .add{
-    background-color: #bf9b30;
-}
-.users-sec .add:hover{
-    background-color: none;
-    border: 1px solid #bf9b30;
-}
-.users-sec h5 a:hover{
+.users-sec h2 a:hover{
     color: #bf9b30;
 }
 .users-sec ul{
@@ -56,14 +52,15 @@
         background: none;
         margin: 0 !important;
         padding: 0px !important;
+        justify-content: space-between;
     }
     
-    .users-sec .parent-users h5{
+    .users-sec .parent-users h2{
        /* font-size: 27px; */
        font-weight: 600;
        background: none;
 }
-.users-sec .parent-users h5:hover{
+.users-sec .parent-users h2:hover{
     color:#bf9b30 ;
        }
 

@@ -101,7 +101,7 @@ const Coursedeatels = () => {
                 temporibus sit cumque! Ratione praesentium iste
               </p>
             </div>
-            <div className="col-lg-10 col-sm-12 lessions-data">
+            {/* <div className="col-lg-10 col-sm-12 lessions-data">
               <h3>Lessions</h3>
               
               <div id="accordion">
@@ -189,9 +189,9 @@ const Coursedeatels = () => {
                       <button>watch lecture</button>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                </div> */}
+              {/* </div> */}
+            {/* </div> */}
           </div>
         </section>
       </div>

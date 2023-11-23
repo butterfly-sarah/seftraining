@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { removeUser } from "../../redux/reducers/userSlice.";
 import { useCallback, useEffect, useState } from "react";
 import moment from "moment";
-function UserStudent(){
+function UserInstructors(){
   const users = useSelector(state=>state.users)
-  const userStudents = users?.filter(user=> user.role === 'Student')
+  const userStudents = users?.filter(user=> user.role === 'instructor')
   const dispatch = useDispatch()
   // useEffect(()=>{
   //     dispatch(fetchCourses())
@@ -121,4 +121,4 @@ function UserStudent(){
         </>
     )
 }
-export default UserStudent;
+export default UserInstructors;

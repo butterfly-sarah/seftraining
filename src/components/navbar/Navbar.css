@@ -21,7 +21,7 @@
     flex-direction: column;
   }
   .navbar{
-    z-index: 555555;
+    z-index: 5;
   }
   .navbar .container img{
     width: 100;

@@ -66,7 +66,7 @@ const handleSubmit = (e) => {
             <div className="details_job">
                 <div className="d-flex justify-content-between align-items-center">
                     <h2 className="h2-title border-bottom border-warning pb-2" style={{ width:'fit-content' }}>Add Job Details</h2>
-                    <button className='btn ps-5 pe-5 pt-1 pb-1 bg-warning text-light '> publish</button>
+                    <button className='btn ps-5 pe-5 pt-1 pb-1  text-light ' style={{background:"#bf9b30"}}> publish</button>
                 </div>
                 <div className='row align-items-center '>
                     <div className='col-lg-7 col-md-12 '>
@@ -168,7 +168,7 @@ const handleSubmit = (e) => {
                             onChange={handleInputChange}/>
                 </div>
                 <div className="d-flex p-3 flex-row gap-3 justify-content-end">
-                    <button id="save" className="btn bg-warning ps-4 pe-4 p-2 text-light fw-lg" type="submit" onClick={handleSubmit}>Save</button>
+                    <button id="save" className="btn  ps-4 pe-4 p-2 text-light fw-lg" style={{background:"#bf9b30"}} type="submit" onClick={handleSubmit}>Save</button>
                     <button id="reset" className="btn bg-secondary ps-4 pe-4 p-2 text-light fw-lg" onclick="resetresetValue()" type="reset">CANCEL</button>
                 </div>
             </div>

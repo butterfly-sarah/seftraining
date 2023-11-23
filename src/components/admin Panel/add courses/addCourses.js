@@ -112,7 +112,7 @@ function AddCourses(){
         <div class="form-section col-md-3 col-lg-3 col-12">
           <label for="startDate">Start Date</label>
           <div class="input-group input-group-icon">
-            <span class="input-group-text  bg-secondary bg-opacity-25  "><FontAwesomeIcon icon={faCalendar} className='text-warning ' /></span>
+            <span class="input-group-text  bg-secondary bg-opacity-25  "><FontAwesomeIcon icon={faCalendar} className='color-yellow ' /></span>
             <input type="text" id="startDate" class="form-control bg-secondary bg-opacity-25 "value={courseDetails.startDate}
             onChange={handleInputChange}/>
         </div>
@@ -121,7 +121,7 @@ function AddCourses(){
         <div class="form-section col-md-3 col-lg-3 col-12">
           <label for="duration">Duration</label>
           <div class="input-group input-group-icon">
-            <span class="input-group-text  bg-secondary bg-opacity-25  "><FontAwesomeIcon icon={faClock} className='text-warning' /></span>
+            <span class="input-group-text  bg-secondary bg-opacity-25  "><FontAwesomeIcon icon={faClock} className='color-yellow' /></span>
             <input type="text" id="duration" class="form-control bg-secondary bg-opacity-25  " value={courseDetails.duration}
             onChange={handleInputChange}/>
         </div>
@@ -160,7 +160,7 @@ function AddCourses(){
         <div class="form-section col-md-3 col-lg-3 col-12">
           <label for="publishingDate">Publishing Date</label>
           <div class="input-group input-group-icon">
-            <span class="input-group-text  bg-secondary bg-opacity-25  "><FontAwesomeIcon icon={faCalendar} className='text-warning ' /></span>
+            <span class="input-group-text  bg-secondary bg-opacity-25  "><FontAwesomeIcon icon={faCalendar} className='color-yellow ' /></span>
             <input type="text" id="publishingDate" class="form-control  bg-secondary bg-opacity-25" value={courseDetails.publishingDate}
             onChange={handleInputChange}/>
         </div>
@@ -178,7 +178,7 @@ function AddCourses(){
         </div>
         
         <div class="buttons row justify-content-end mx-auto mt-3">
-          <button class="btn cancel-btn col-md-2 col-lg-2 col-12 text-white order-last order-md-first order-lg-first">CANCEL</button>
+          <button class="btn cancel-btn col-md-2 col-lg-2 col-12 text-white order-last order-md-first order-lg-first mx-2">CANCEL</button>
           <button class="btn save-btn col-md-2 col-lg-2 col-12 text-white ml-md-3 mb-3 mb-md-0 mb-lg-0 " onClick={saveData}>SAVE</button>
       </div>
 

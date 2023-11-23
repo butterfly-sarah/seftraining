@@ -12,9 +12,34 @@ import "./Login.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import { useDispatch, useSelector } from "react-redux";
 import { setOnline } from "../redux/reducers/userSlice.";
-
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import './../alert/customUi.css';
+import { confirmAlert } from "react-confirm-alert";
 
 const LoginComponent = () => {
+  
+  const submit2 = () => {
+    confirmAlert({
+      customUI: ({ onClose }) => {
+        return (
+          <div className="popup-overlay">
+        <h5 className='poptitle'>Incorrect Password</h5>
+        <button onClick={onClose} className='popclose'>
+        <FontAwesomeIcon icon={faXmark} />
+        </button>
+        <button className="nav-link  p-0 text-light"
+          onClick={()=>{onClose();handlelogin()}}
+        >
+          Try again
+        </button>
+      </div>
+        );
+      }
+    });
+  };
+  const navigate=useNavigate()
+  function handlelogin(){
+    navigate('/login')}
   const [showPassword, setShowPassword] = useState(false);
   const [userid, setuserid] = useState("");
   const [userpassword, setuserpassword] = useState("");
@@ -28,7 +53,6 @@ const LoginComponent = () => {
     console.log(users);
     e.preventDefault();
     const foundUser = users.find(user => user.email === userid && user.password === userpassword);
-    console.log(foundUser.userId)
     if (foundUser) {
       dispatch(setOnline(foundUser));
       console.log(foundUser)
@@ -36,12 +60,13 @@ const LoginComponent = () => {
         Navigate("/");
       }, 1000);
     } else {
-      window.alert('Invalid password');
+      submit2()
     }
     }
 
   return (
-    <div className="sign-login-form position-absolute  top-0 start-0 end-0 bg-dark  bottom-0 " style={{zIndex:'5454654654654',height:'100vh'}}>
+    <div>
+    <div className="sign-login-form position-absolute  top-0 start-0 end-0 bg-dark  bottom-0 " style={{zIndex:'7',height:'100vh'}}>
       <div className="container">
         <div className="row align-items-center ">
           <div className="form-parent">
@@ -131,6 +156,7 @@ const LoginComponent = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

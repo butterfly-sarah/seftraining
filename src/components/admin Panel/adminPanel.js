@@ -20,11 +20,12 @@ function AdminPanel() {
       <div className="container text-start w-100 d-block me-auto">
         <Title title={"Admin Panel"} />
       </div>
-      <div className="container d-flex flex-row gap-3 flex-wrap flex-lg-nowrap w-100 mt-5">
-        <div className="col-lg-3 col-xs-12 flex-shrink-0 mb-5">
+      <div className="container-lg d-flex flex-row gap-3 flex-wrap flex-md-nowrap w-100 mt-5">
+        <div className="col-lg-3 col-xs-12 flex-shrink-0">
           <AdminSideBar />
         </div>
-        <div className="col-lg-9">
+        <div className="col-lg-9 col-xs-12">
+          
           {/* <AddJob/> */}
           {/* <AddCourses/> */}
           {/* <AddArticles/> */}

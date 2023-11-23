@@ -49,7 +49,7 @@ const AddCertificateDetails = () => {
      <div className="overlay">
 
         <div className="container-info ">
-            <h2 className="h2-title">Certificate Details</h2>
+            <h2 className="h2-title">Add Certificate Details</h2>
             <span className="row3"></span>
             <form className="details" >
                 <div className="info ">
@@ -92,11 +92,11 @@ const AddCertificateDetails = () => {
             </form>
         </div>   
         <div className=" ">
-            <label className="label my-2"  >Upload Certificate</label>
+            <h2 className="title text-light    "  >Upload File</h2>
             <Dragdrop onFileDrop={handleFileDrop}/>
             <div className="d-flex justify-content-end gap-3 mt-3 text-light">
             <button id="reset" className=" btn bg-secondary text-light ps-4 pe-4 p-2 " onclick="resetresetValue()" type="reset">CANCEL</button>
-                    <button className="  btn text-light ps-4 pe-4 p-2" style={{background:"#bf9b30"}} type="submit">UPLOAD</button>
+                    <button className="  btn bg-warning text-light ps-4 pe-4 p-2" type="submit">UPLOAD</button>
             </div>
      </div>
     </div>

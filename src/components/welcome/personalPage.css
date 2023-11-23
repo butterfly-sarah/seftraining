@@ -18,6 +18,7 @@
     
   }
   .exams .view{
+    height: fit-content;
     background: #bf9b30;
     transition: 0.5s;
   }

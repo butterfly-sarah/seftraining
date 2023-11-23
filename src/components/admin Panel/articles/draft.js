@@ -6,9 +6,10 @@ import { removeArticle } from "../../redux/reducers/ArticlesSlice.";
 import Pagination from "../../pagination/pagination";
 import moment from "moment";
 import { useCallback, useEffect, useState } from "react";
-function Articles(){
+function DraftArticles(){
 
   const articles = useSelector(state=>state.articles)
+  const draftArticles = articles.filter(article=>article.status === false);
   console.log(articles)
   const dispatch = useDispatch()
 
@@ -48,7 +49,7 @@ function Articles(){
         <div class="article-sec  ">
           {
             isMobile?"":<Link to="/adminPanel/addarticles" >
-            <button className="btn color-yellow ps-4 m-2 d-block pe-4 p-2 ms-auto" style={{transform:'translateY(-50px)',border:"1px solid #bf9b30"}}> Create new article</button>
+            <button className="btn  ps-4 m-2 d-block pe-4 p-2 ms-auto color-yellow" style={{transform:'translateY(-50px)',border:"1px solid #bf9b30"}}> Create new article</button>
             </Link>
           }
               {
@@ -64,8 +65,8 @@ function Articles(){
 
 
                 {isMobile?(<div class="row m-0 mt-5 col-12" id="items" >
-                    {articles?.map((article,index)=>(
-                      <div class="col-12 text-light  " id="item" >
+                    {draftArticles?.map((article,index)=>(
+                      <div class="col-12 text-light  " key={index} id="item" >
                       <button className={article.status?"table_btn publish_btn":"bg-secondary table_btn text-light"}>
                       {article.status ? "published" : "draft"}
                       </button>                          <h3>Title</h3>
@@ -99,7 +100,7 @@ function Articles(){
                     <th class="col"></th>
                 </tr>
                   </thead>
-                {articles?.map((article,index)=>(
+                {draftArticles?.map((article,index)=>(
                   <tr key={index}>
                     <td>{article.articleTitle}</td>
                     <td>{article.category}</td>
@@ -132,4 +133,4 @@ function Articles(){
         </>
     )
 }
-export default Articles;
+export default DraftArticles;

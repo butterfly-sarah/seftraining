@@ -5,6 +5,7 @@ import { faCalendarAlt, faCheckCircle, faFileAlt, faPenToSquare, faUser } from '
 import Footer from '../footer/Footer'
 import Title from '../title/title'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
+import { Link } from 'react-router-dom'
 function PersonalPage(){
 
     return(
@@ -21,12 +22,12 @@ function PersonalPage(){
         <span class=" text-uppercase text-white">welcome back </span>
         <span class="text-uppercase" style={{color:"#bf9b30"}}> tariq ali</span>
         </div>
-        <button class="navbar-toggler" type="button"
-            data-bs-toggle = "collapse" data-bs-target = "#main" aria-controls="main" aria-expanded ="false"
-            aria-label="Toggle navigation">
-        <a href="#" class="text-white  fs-3btn main-bt btn 
-             text-uppercase ps-4 pe-4 view"
-             >view Profile</a></button>
+        
+        <Link to={"/profile"} class="text-white btn  btn 
+             text-uppercase  view "
+             ><button class="navbar-toggler p-0 m-0" type="button"
+             data-bs-toggle = "collapse" data-bs-target = "#main" aria-controls="main" aria-expanded ="false"
+             aria-label="Toggle navigation">VIEW PROFILE</button></Link>
         </div>
         
         

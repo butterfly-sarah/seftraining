@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import img from '../../assest/oooo.jpg';
 import { faChevronRight, faClock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { BrowserRouter, Link, MemoryRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, MemoryRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import ShowNews from './showNew';
 import Footer from '../footer/Footer';
 import { confirmAlert } from "react-confirm-alert";
@@ -11,20 +11,36 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import CustomUI from './../alert/CustomUi';
 import { useSelector } from 'react-redux';
 import LoginComponent from './../login/Login';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import './../alert/customUi.css';
 
-const submit1 = () => {
-  console.log("//");
-  confirmAlert({
-    customUI: ({ onClose }) => {
-      return (
-        <CustomUI onClose={onClose}/>
-      );
-    }
-  });
-};
+
 function News(){
+  const submit1 = () => {
+    confirmAlert({
+      customUI: ({ onClose }) => {
+        return (
+          <div className="popup-overlay">
+        <h5 className='poptitle'>Please login to view this page</h5>
+        <button onClick={onClose} className='popclose'>
+        <FontAwesomeIcon icon={faXmark} />
+        </button>
+        <button className="nav-link  p-0 text-light"
+          onClick={()=>{onClose();handlelogin()}}
+        >
+          Login
+        </button>
+      </div>
+        );
+      }
+    });
+  };
+
   const users = useSelector(state=>state.users)
 const user = users.filter(user=>user?.online == true)[0]
+const navigate=useNavigate()
+  function handlelogin(){
+    navigate('/login')}
     return(
       <>
       {user?.online?"":submit1()}
