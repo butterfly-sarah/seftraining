@@ -66,7 +66,8 @@ const Navbar =()=>{
       <div className="container-md navbar-component mb-3 ">
       <nav className="navbar navbar-expand-md ">
   <div className={nav ?" container container-fluid " :"container"}>
-  <img src={logo} className="navbar-brand d-block " alt="..."/>
+  <Link to="/">
+  <img src={logo} className="navbar-brand d-block " alt="..."/></Link>
     
     <button className="navbar-toggler" onClick={handleNav} type="button" >
     <FontAwesomeIcon icon={faBars} className="icon-navbar " />

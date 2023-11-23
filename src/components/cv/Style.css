@@ -152,4 +152,35 @@ i{
         border-width: 0px;
         padding: 0;
     }
+    
+}
+@media(max-width:500px){
+    .centered{
+        margin: auto;
+    }
+    .user-part{
+        padding: 20px;
+        background-color: rgba(0, 0, 0,0.4);
+        border-radius: 5px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .user-part h4{
+        font-size: larger;
+        font-weight: 700;
+    }
+    .user-part p{
+        font-size: medium;
+        font-weight: 100;
+    }
+    .user-part .Active{
+        border: none;
+        background-color: #bf9b30;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 15px;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
 }

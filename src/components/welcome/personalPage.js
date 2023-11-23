@@ -62,8 +62,8 @@ function PersonalPage(){
                     <div class="col-4  p-1" style={{fontWeight:"700"}}>LEV.1</div>
                     <div class="col-4  p-1">
                     <FontAwesomeIcon icon={faUser} style={{color:"#bf9b30"}}/> 20 Students
-                    </div>
-                    <button class="rounded border-0 col-4  course_button text-light p-1 font-weight-bold">VIEW DETAILS</button>
+                    </div><Link to={"/StudentPanel/coursedetails"} className='col-4 '>
+                    <button class="rounded border-0  course_button text-light p-1 font-weight-bold">VIEW DETAILS</button></Link>
                     </div>
                 </div>
                 <div class="course mt-3 p-4">
@@ -72,8 +72,8 @@ function PersonalPage(){
                     <div class="col-4  p-1 font-weight-bold" style={{fontWeight:"700"}}>LEV.1</div>
                     <div class="col-4  p-1">
                     <FontAwesomeIcon icon={faUser} style={{color:"#bf9b30"}}/> 20 Students
-                    </div>
-                    <button class="rounded border-0 col-4 course_button text-light p-1 font-weight-bold ">VIEW DETAILS</button>
+                    </div><Link to={"/StudentPanel/coursedetails"} className='col-4 '>
+                    <button class="rounded border-0 course_button text-light p-1 font-weight-bold ">VIEW DETAILS</button></Link>
                     </div>
                 </div>
                 </div>
@@ -129,8 +129,8 @@ function PersonalPage(){
                     </div>
                     <div >
                     <FontAwesomeIcon icon={faFileAlt}  style={{color:"#bf9b30"}}/><small> 12 lessons</small> 
-                    </div>
-                    <button class="ms-auto  rounded border-0 course_button mt-2 p-2 text-light">VIEW DETAILS</button>
+                    </div><Link to={"/StudentPanel/coursedetails"}>
+                    <button class="ms-auto  rounded border-0 course_button mt-2 p-2 text-light">VIEW DETAILS</button></Link>
               </div>
               </div>
               <div class="left_courses2 font-weight-bold d-md-none d-lg-none  d-xs-block d-sm-block
@@ -152,7 +152,8 @@ function PersonalPage(){
                     <div >
                     <FontAwesomeIcon icon={faFileAlt}  style={{color:"#bf9b30"}}/><small> 12 lessons</small> 
                     </div>
-                    <button class="ms-auto  rounded border-0 course_button mt-2 p-2 text-light">VIEW DETAILS</button>
+                    <Link to={"/StudentPanel/coursedetails"}>
+                    <button class="ms-auto  rounded border-0 course_button mt-2 p-2 text-light">VIEW DETAILS</button></Link>
               </div>
               </div>
               <div class="left_courses2 font-weight-bold d-md-none d-lg-none  d-xs-block d-sm-block

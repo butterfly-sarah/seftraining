@@ -56,8 +56,8 @@
     }
     
     .users-sec .parent-users h2{
-       /* font-size: 27px; */
-       font-weight: 600;
+        font-size: large !important;
+       font-weight: 700;
        background: none;
 }
 .users-sec .parent-users h2:hover{

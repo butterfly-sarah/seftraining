@@ -43,32 +43,34 @@ function Jobs(){
         {
           isMobile ? (<div class="row m-0 mt-5 col-12" id="items" >
           {jobs?.map((job,index)=>(
-            <div class="col-12 text-light  " key={index} id="item" >
-            <button className={job.status?"table_btn publish_btn":"bg-secondary table_btn text-light"}>
+            <div class="col-12 text-light  user-part" key={index} id="item" >
+            <button className={job.status?"table_btn publish_btn Active":"Active bg-secondary table_btn text-light"}>
             {job.status ? "opened" : "closed"}
             </button>
-                <h3>company Name</h3>
+                <h4>company Name</h4>
                 <p>{job.companyName}</p>
                 <div class="d-flex flex-column  gap-2">
                     <div className="col-xs-12">
-                        <h3>field</h3>
+                        <h4>field</h4>
                         <p>{job.field}</p>
                     </div>
                     <div className="col-xs-12">
-                      <h3>published data</h3>
+                      <h4>published data</h4>
                     <p>{job.date}</p>
                     </div>
                     <div className="col-xs-12">
-                      <h3>published time</h3>
+                      <h4>published time</h4>
                     <p>{job.time}</p>
                     </div>
                 </div>
                 <div class="icons2 d-flex justify-content-end gap-2">
-                  <FontAwesomeIcon icon={faEdit} className="table-icon"/>
-                  <FontAwesomeIcon icon={faTrash} onClick={()=>dispatch(removeJob(job))} className="table-icon"/>
+                  <FontAwesomeIcon icon={faEdit} className="table-icon" color="#bf9b30"/>
+                  <FontAwesomeIcon icon={faTrash} onClick={()=>dispatch(removeJob(job))} className="table-icon" color="#bf9b30"/>
                 </div>
             </div>))}
-            <a class="btn row_btn col-12" href="#" role="button">Create New user</a>
+            <Link to="/adminPanel/addJobs">
+          <button className="btn text-light col-12 ps-4 m-2 d-block ms-auto" style={{background:"#bf9b30"}}> Create new job</button>
+          </Link>
           </div>)
           : <div class="article-sec  ">
           <Link to="/adminPanel/addJobs">

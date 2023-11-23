@@ -3,6 +3,7 @@ import "./Coursedeatels.css"
 import image from "../../assest/main_background.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFile, faChartSimple,faUser,faMessage,faClock,faCalendar,faCertificate,faPlus } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../footer/Footer";
 
 const Coursedeatels = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
@@ -26,12 +27,111 @@ const Coursedeatels = () => {
           >
             <div className="col-lg-7 col-sm-12">
               <img
-                className="rounded w-100 h-100"
+                className="rounded w-100"
                 src={image}
                 alt="picture"
-              />
+              /><div className=" col-sm-12 my-5" id="tech-data3">
+              <h3>Introduction</h3>
+              <p style={{textAlign:"justify"}}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, sit aspernatur. Quae provident dignissimos
+                temporibus sit cumque! Ratione praesentium iste incidunt
+                reprehenderit vel, nam quis, corporis voluptas tenetur harum a.
+              </p>
             </div>
-            <div className="col-lg-4 col-sm-12">
+                          <div className=" col-sm-12 lessions-data">
+              <h3>Lessions</h3>
+              
+              <div id="accordion">
+                <div className="card col-lg-8 col-sm-12" id="item">
+                  <div className="card-header" onClick={() => handleAccordionClick('collapseOne')}
+                    
+                      // className="card-link"
+                      data-toggle="collapse"
+                      href="#collapseOne"
+                    >
+                      <h3 className="d-flex justify-content-between ">
+                        Introduction To Python <FontAwesomeIcon className={activeAccordion === 'collapseOne' ? 'icon rotate' : 'icon'} icon={faPlus} />
+                      </h3>
+                    
+                  </div>
+                  <div
+                    id="collapseOne"
+                    // className="collapse show"
+                    data-parent="#accordion" className={`collapse ${activeAccordion === 'collapseOne' ? 'show' : ''}`}
+                  >
+                    <div className="card-body">
+                      <p style={{textAlign:"justify"}}>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Voluptatibus, sit aspernatur. Quae provident
+                        dignissimos temporibus sit cumque!
+                      </p>
+                      <button>watch lecture</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card col-lg-8   col-sm-12" id="item">
+                  <div className="card-header" onClick={() => handleAccordionClick('collapseTwo')}>
+                    <a
+                      className="collapsed card-link"
+                      data-toggle="collapse"
+                      href="#collapseTwo"
+                    >
+                      <h3 className="d-flex justify-content-between "> 
+                      
+                        Functions <FontAwesomeIcon className={activeAccordion === 'collapseTwo' ? 'icon rotate' : 'icon'} icon={faPlus} />
+                      </h3>
+                    </a>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    className={`collapse ${activeAccordion === 'collapseTwo' ? 'show' : ''}`}
+                    data-parent="#accordion"
+                  >
+                    <div className="card-body">
+                      <p style={{textAlign:"justify"}}>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Voluptatibus, sit aspernatur. Quae provident
+                        dignissimos temporibus sit cumque!
+                      </p>
+                      <button>watch lecture</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card col-lg-8 col-sm-12" id="item">
+                  
+                  <div className="card-header" onClick={() => handleAccordionClick('collapseThree')}>
+                    <a
+                      className="collapsed card-link"
+                      data-toggle="collapse"
+                      href="#collapseThree"
+                    >
+                      <h3 className="d-flex justify-content-between ">
+                        Arrays<FontAwesomeIcon className={activeAccordion === 'collapseThree' ? 'icon rotate' : 'icon'} icon={faPlus} />
+                      </h3>
+                    </a>
+                  </div>
+                  <div
+                    id="collapseThree"
+                    className={`collapse ${activeAccordion === 'collapseThree' ? 'show' : ''}`}
+                    data-parent="#accordion"
+                  >
+                    <div className="card-body">
+                      <p style={{textAlign:"justify"}}>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Voluptatibus, sit aspernatur. Quae provident
+                        dignissimos temporibus sit cumque!
+                      </p>
+                      <button>watch lecture</button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            </div>
+            <div className="col-lg-3 col-sm-12">
               <div className="row d-flex gap-3" id="tech-data">
                 <div className="col-lg-5 d-flex gap-" id="data">
                 <FontAwesomeIcon icon={faFile} className="icon" />                 
@@ -69,132 +169,38 @@ const Coursedeatels = () => {
                 </p>
                 <button className="btn">enrolled</button>
               </div>
+              <div className=" col-sm-12 mt-5" id="tech-data4">
+              <h3 className="my-4">Assessment</h3>
+              <p style={{textAlign:"justify"}}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, sit aspernatur. Quae provident dignissimos
+                temporibus sit cumque! Ratione praesentium iste
+              </p>
+              <h3 className="my-4">Requirements</h3>
+              <p style={{textAlign:"justify"}}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, sit aspernatur. Quae provident dignissimos
+                temporibus sit cumque! Ratione praesentium iste
+              </p>
+              <h3 className="my-4">Materials</h3>
+              <p style={{textAlign:"justify"}}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, sit aspernatur. Quae provident dignissimos
+                temporibus sit cumque! Ratione praesentium iste
+              </p>
             </div>
+            </div>
+            
           </div>
           <div className="row" id="second-sec">
-            <div className="col-lg-9 col-sm-12" id="tech-data3">
-              <h3>Introduction</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus, sit aspernatur. Quae provident dignissimos
-                temporibus sit cumque! Ratione praesentium iste incidunt
-                reprehenderit vel, nam quis, corporis voluptas tenetur harum a.
-              </p>
-            </div>
-            <div className="col-lg-3 col-sm-12" id="tech-data4">
-              <h3>Assessment</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus, sit aspernatur. Quae provident dignissimos
-                temporibus sit cumque! Ratione praesentium iste
-              </p>
-              <h3>Requirements</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus, sit aspernatur. Quae provident dignissimos
-                temporibus sit cumque! Ratione praesentium iste
-              </p>
-              <h3>Materials</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus, sit aspernatur. Quae provident dignissimos
-                temporibus sit cumque! Ratione praesentium iste
-              </p>
-            </div>
-            {/* <div className="col-lg-10 col-sm-12 lessions-data">
-              <h3>Lessions</h3>
-              
-              <div id="accordion">
-                <div className="card col-lg-8 col-sm-12" id="item">
-                  <div className="card-header" onClick={() => handleAccordionClick('collapseOne')}
-                    
-                      // className="card-link"
-                      data-toggle="collapse"
-                      href="#collapseOne"
-                    >
-                      <h3 className="d-flex justify-content-between ">
-                        Introduction To Python <FontAwesomeIcon className={activeAccordion === 'collapseOne' ? 'icon rotate' : 'icon'} icon={faPlus} />
-                      </h3>
-                    
-                  </div>
-                  <div
-                    id="collapseOne"
-                    // className="collapse show"
-                    data-parent="#accordion" className={`collapse ${activeAccordion === 'collapseOne' ? 'show' : ''}`}
-                  >
-                    <div className="card-body">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Voluptatibus, sit aspernatur. Quae provident
-                        dignissimos temporibus sit cumque!
-                      </p>
-                      <button>watch lecture</button>
-                    </div>
-                  </div>
-                </div>
+            
+            <div className="col-lg-2"></div>
+            
 
-                <div className="card col-lg-8   col-sm-12" id="item">
-                  <div className="card-header" onClick={() => handleAccordionClick('collapseTwo')}>
-                    <a
-                      className="collapsed card-link"
-                      data-toggle="collapse"
-                      href="#collapseTwo"
-                    >
-                      <h3 className="d-flex justify-content-between "> 
-                      
-                        Functions <FontAwesomeIcon className={activeAccordion === 'collapseTwo' ? 'icon rotate' : 'icon'} icon={faPlus} />
-                      </h3>
-                    </a>
-                  </div>
-                  <div
-                    id="collapseTwo"
-                    className={`collapse ${activeAccordion === 'collapseTwo' ? 'show' : ''}`}
-                    data-parent="#accordion"
-                  >
-                    <div className="card-body">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Voluptatibus, sit aspernatur. Quae provident
-                        dignissimos temporibus sit cumque!
-                      </p>
-                      <button>watch lecture</button>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card col-lg-8 col-sm-12" id="item">
-                  
-                  <div className="card-header" onClick={() => handleAccordionClick('collapseThree')}>
-                    <a
-                      className="collapsed card-link"
-                      data-toggle="collapse"
-                      href="#collapseThree"
-                    >
-                      <h3 className="d-flex justify-content-between ">
-                        Arrays<FontAwesomeIcon className={activeAccordion === 'collapseThree' ? 'icon rotate' : 'icon'} icon={faPlus} />
-                      </h3>
-                    </a>
-                  </div>
-                  <div
-                    id="collapseThree"
-                    className={`collapse ${activeAccordion === 'collapseThree' ? 'show' : ''}`}
-                    data-parent="#accordion"
-                  >
-                    <div className="card-body">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Voluptatibus, sit aspernatur. Quae provident
-                        dignissimos temporibus sit cumque!
-                      </p>
-                      <button>watch lecture</button>
-                    </div>
-                  </div>
-                </div> */}
-              {/* </div> */}
-            {/* </div> */}
           </div>
         </section>
       </div>
+      <Footer/>
     </>
   );
 };

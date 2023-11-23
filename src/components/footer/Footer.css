@@ -12,8 +12,12 @@
     --background-input: #ffffff1e ;
   }
 .footer-component{
+    position: relative;
     padding-top: 20px;
     overflow: hidden;
+}
+.backfooter{
+    display: none;
 }
 .footer-component .footer-logo
 {width: 90px;}
@@ -66,7 +70,12 @@
     .footer-component .footer-last-sec{ border: none;}
     .footer-component .footer-icons{position: absolute;top: -250px;right: 0;}
     .footer-component .social-icon{margin-bottom: 20px;font-size: 30px;}  
+    .footer-component{position: absolute;bottom: 0;z-index: 4;}
+    .backfooter{
+        display: block;
+    }
 }
 @media (max-width:280px) {
+    .footer-component{position: absolute;bottom: 0;z-index: 4;}
     .footer-component .footer-title p{font-size: 18px;}   
 }

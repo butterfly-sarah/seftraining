@@ -66,8 +66,9 @@ function App() {
       <Route path="/profile" element={<Profile />} />
       )}    
         {user?.online && user?.role === 'Student'&& (<Route path='/createCv' element={<CvShape/>}/>)}
+        {user?.online && user?.role === 'Student'&& (<Route path='/StudentPanel/coursedetails' element={<Coursedeatels />}/>)}
         
-        {user?.online && user?.role === 'Student' &&<Route path='/StudentPanel' element={<PersonalPage/>}/>}
+        {user?.online && user?.role === 'Student' &&(<Route path='/StudentPanel' element={<PersonalPage/>}/>)}
         {user?.online &&user?.role === 'instructor' &&<Route path='/instructorPanel' element={<PersonalPage/>}/>}
 
         {user?.online &&user?.role === 'Admin' && (
@@ -87,7 +88,7 @@ function App() {
               />
               <Route path="courses" element={<Courses />} />
               <Route path="publishedcourses" element={<PublishedCourses />} />
-              <Route path="coursedetails" element={<Coursedeatels />} />
+              
               <Route path="draftcourses" element={<DraftCourses />} />
               <Route path="addcourses" element={<AddCourses />} />
               <Route path="users" element={<Users />} />

@@ -45,28 +45,31 @@ function UserAdmins(){
         {
           isMobile ? (<div class="row m-0 mt-5 col-12" id="items" >
             {userStudents?.map((user,index)=>(
-              <div class="col-12 text-light  " key={index} id="item" >
-              <button className={user.status?"table_btn publish_btn":"bg-secondary table_btn text-light"}>
+              <div class="col-12 text-light user-part" key={index} >
+              <button className={user.status?"table_btn publish_btn Active":"bg-secondary table_btn text-light"}>
               {user.status ? "Active" : "inActive"}
               </button>
-                  <h3>Title</h3>
+                  <h4>Name</h4>
                   <p>{user.fName} {user.lName}</p>
                   <div class="d-flex  justify-content-between">
-                      <div>
-                          <h3>User id </h3>
-                          <p>{user.userId}</p>
-                      </div>
-                      <div>
-                        <h3>Role</h3>
+                  <div>
+                        <h4>Role</h4>
                       <p>{user.role}</p>
                       </div>
+                      <div>
+                          <h4>User id </h4>
+                          <p>{user.userId}</p>
+                      </div>
+                      
                   </div>
                   <div class="icons2 d-flex justify-content-end gap-2">
-                    <FontAwesomeIcon icon={faEdit} className="table-icon"/>
-                    <FontAwesomeIcon icon={faTrash} onClick={()=>dispatch(removeUser(user))} className="table-icon"/>
+                    <FontAwesomeIcon icon={faEdit} className="table-icon" style={{color:"#bf9b30"}}/>
+                    <FontAwesomeIcon icon={faTrash} onClick={()=>dispatch(removeUser(user))} className="table-icon" style={{color:"#bf9b30"}}/>
                   </div>
               </div>))}
-              <a class="btn row_btn col-12" href="#" role="button">Create New user</a>
+              <Link to="/adminPanel/addUsers">
+              <button class="btn row_btn col-12 text-light mt-4" role="button" style={{background:"#bf9b30"}}>Create New user</button></Link>
+            
             </div>)
             
           : <div class="user-sec  ">

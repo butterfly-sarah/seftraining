@@ -64,17 +64,17 @@
     margin-top: 5px;
 }
 #tech-data2 .icon {
-    font-size: 25px;
+    font-size: 20px;
     margin-right: 10px;
 }
 #tech-data2 p{
     font-weight: 600;
-    font-size: 17px;
 }
 #tech-data2{
     padding-top: 1.5rem !important;
 }
 #tech-data2 p span{
+    font-weight: 100;
     color: #D0D0D0;
 }
 #tech-data2 button{
@@ -94,16 +94,13 @@
 }
 #second-sec p{
     color: #D0D0D0;
-    font-size: 18px;
+    text-align: justify;
 }
 #second-sec h3{
     margin: 25px 0;
     font-size: 26px;
 }
-.lessions-data{
-    margin-top: -410px !important;
-    margin-left: 15px;
-}
+
 #accordion #item{
     background-color: rgba(22, 22, 22, 0.4);
     color:#D0D0D0;
@@ -150,6 +147,9 @@
     cursor: pointer;
 }
 @media (max-width: 768px){
+    #accordion #item h3 {
+        font-size: 20px;
+    }
     .tech-overlay{
         padding: 20px;
     }
@@ -171,13 +171,11 @@
     } 
     .lessions-data{
         margin-top: 0;
-        margin-left: 15px;
     }
     #accordion #item button{
         width: 200px;
         height: 50px;
         position: absolute;
-        top: 220px;
         right: 20px;
     }
     

@@ -44,44 +44,46 @@ function DraftCourses(){
         {
         isMobile ?  (<div class="row m-0 mt-5 col-12" id="items" >
         {DraftCourses?.map((course,index)=>(
-          <div class="col-12 text-light  " key={index} id="item" >
-          <button className={course.status?"table_btn publish_btn":"bg-secondary table_btn text-light"}>
+          <div class="col-12 text-light  user-part" key={index} id="item" >
+          <button className={course.status?"table_btn publish_btn Active":" Active bg-secondary table_btn text-light"}>
           {course.status ? "Active" : "inActive"}
           </button>
-              <h3>Title</h3>
+              <h4>Title</h4>
               <p>{course.courseName}</p>
               <div class="d-flex flex-wrap  justify-content-between">
                   <div className="w-50">
-                      <h3>level</h3>
+                      <h4>level</h4>
                       <p>{course.level}</p>
                   </div>
                   <div className="w-50">
-                    <h3>num Of Lessons</h3>
+                    <h4>num Of Lessons</h4>
                     <p>{course.numOfLessons}</p>
                   </div>
                   <div className="w-50">
-                    <h3>language</h3>
+                    <h4>language</h4>
                     <p>{course.language}</p>
                   </div>
                   <div className="w-50">
-                    <h3>start Date</h3>
+                    <h4>start Date</h4>
                     <p>{course.startDate}</p>
                   </div>
                   <div className="w-50">
-                    <h3>duration</h3>
+                    <h4>duration</h4>
                     <p>{course.duration}</p>
                   </div>
                   <div className="w-50">
-                    <h3>publishing Date</h3>
-                    <p>{course.publishingDate}</p>
+                    <h4>publishing Date</h4>
+                    <p>{course.date}</p>
                   </div>
               </div>
               <div class="icons2 d-flex justify-content-end gap-2">
-                <FontAwesomeIcon icon={faEdit} className="table-icon"/>
-                <FontAwesomeIcon icon={faTrash} onClick={()=>dispatch(removeCourse(course))} className="table-icon"/>
+                <FontAwesomeIcon icon={faEdit} className="table-icon" color="#bf9b30"/>
+                <FontAwesomeIcon icon={faTrash} onClick={()=>dispatch(removeCourse(course))} className="table-icon" color="#bf9b30"/>
               </div>
           </div>))}
-          <a class="btn row_btn col-12" href="#" role="button">Create New user</a>
+          <Link to="/adminPanel/addCourses">
+          <button className="btn col-12 ps-4 m-2 d-block pe-4 p-2 ms-auto text-light" style={{background:"#bf9b30"}}> Create new course</button>
+          </Link>
         </div>)
         :<div class="article-sec  ">
         <Link to="/adminPanel/addCourses" >
