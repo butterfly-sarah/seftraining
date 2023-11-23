@@ -67,7 +67,7 @@
   .left_courses2{
     font-size: 30px;
   }
-  @media(max-width:450px){
+  @media(max-width:778px){
     .parent_top_courses{
       position: relative;
       padding: 50px;

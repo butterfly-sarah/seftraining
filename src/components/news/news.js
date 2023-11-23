@@ -13,8 +13,8 @@ import { useSelector } from 'react-redux';
 import LoginComponent from './../login/Login';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import './../alert/customUi.css';
-
-
+import Helmet from 'react-helmet';
+import backimg from'./../../assest/main_background.jpg'
 function News(){
   const submit1 = () => {
     confirmAlert({
@@ -35,14 +35,24 @@ function News(){
       }
     });
   };
-
+  const back={background:"red"};
   const users = useSelector(state=>state.users)
 const user = users.filter(user=>user?.online == true)[0]
 const navigate=useNavigate()
   function handlelogin(){
     navigate('/login')}
+    
     return(
       <>
+      <Helmet>
+      <style>
+      {`
+      body {
+        background-image: url(${backimg});
+        }
+      `}
+      </style>
+       </Helmet>
       {user?.online?"":submit1()}
         <div class="contin mt-3">
         <div class="child-contin">

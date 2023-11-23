@@ -70,7 +70,7 @@
     .footer-component .footer-last-sec{ border: none;}
     .footer-component .footer-icons{position: absolute;top: -250px;right: 0;}
     .footer-component .social-icon{margin-bottom: 20px;font-size: 30px;}  
-    .footer-component{position: absolute;bottom: 0;z-index: 4;}
+    .footer-component{position: absolute;bottom: 0;z-index: 4;width: 100vw;}
     .backfooter{
         display: block;
     }
