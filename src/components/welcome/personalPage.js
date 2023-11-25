@@ -81,8 +81,9 @@ function PersonalPage(){
 
             <div class="col-xs-12 col-md-5">
                 <div class="row">
-                <h2 style={{fontWeight:"700"}} className='col-md-9'>Upcoming Exams</h2>
-                <button class="col-3 d-none d-md-block  rounded border-0  course_button text-light font-weight-bold">CREATE NEW</button>
+                <h2 style={{fontWeight:"700"}} className='col-md-8'>Upcoming Exams</h2>
+                <Link to={'addexam'} className='col-md-4 d-flex justify-content-end px-1'>
+                <button class="  rounded border-0  course_button text-light font-weight-bold p-1" style={{width:"max-content"}}>CREATE NEW</button></Link>
                 </div>
                 <div class="row mt-3 course p-2">
                 <div class="col-3 text-center">

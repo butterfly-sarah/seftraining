@@ -31,6 +31,7 @@ import DraftCourses from './components/admin Panel/courses/draft';
 import AddCertificateDetails from './components/admin Panel/add certificate/Add_Certificate_Details';
 import { useSelector } from 'react-redux';
 import Jobs from './components/admin Panel/jobs/Jobs';
+import Addexam from './components/exam/addexam';
 
 function App() {
   const users = useSelector(state=>state.users)
@@ -70,6 +71,7 @@ function App() {
         
         {user?.online && user?.role === 'Student' &&(<Route path='/StudentPanel' element={<PersonalPage/>}/>)}
         {user?.online &&user?.role === 'instructor' &&<Route path='/instructorPanel' element={<PersonalPage/>}/>}
+        {user?.online &&user?.role === 'instructor' &&<Route path='/instructorPanel/addexam' element={<Addexam/>}/>}
 
         {user?.online &&user?.role === 'Admin' && (
               <Route path='/adminPanel' element={<AdminPanel/>}>
