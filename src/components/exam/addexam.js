@@ -13,11 +13,11 @@ function Addexam(){
         </div>
         <div class="exams-container position-relative mt-3 ">
         <div className='d-flex justify-content-between container mb-5'>
-        <div className='' style={{fontWeight:"900"}}>
+        <div className='col-9' style={{fontWeight:"900"}}>
         <h3 class=" text-capitalize text-white" >add exam details</h3>
         
         </div>
-        <button className="rounded border-0  course_button text-light px-5 py-0  text-uppercase" style={{fontWeight:"300"}}>publish</button>
+        <button className="rounded border-0  course_button text-light px-3 py-0  text-uppercase col-3" style={{fontWeight:"300",width:"fit-content"}}>publish</button>
         </div>
         </div>
         <h5 class=" text-capitalize text-white m-3 my-5">exam information</h5>
