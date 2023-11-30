@@ -1,7 +1,7 @@
 import { faEdit, faPenToSquare, faTrash, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { removeJob } from "../../redux/reducers/JobSlice.";
 import { useCallback, useEffect, useState } from "react";
 function Jobs(){
@@ -37,7 +37,10 @@ function Jobs(){
   useEffect(() => {
     handleMobileView();
   }, [handleMobileView]);
-  
+  const navigate=useNavigate()
+  const handleapp=()=>{
+    navigate("../application")
+  }
     return(
         <>
         {
@@ -47,9 +50,9 @@ function Jobs(){
             <button className={job.status?"table_btn publish_btn Active":"Active bg-secondary table_btn text-light"}>
             {job.status ? "opened" : "closed"}
             </button>
-                <h4>company Name</h4>
-                <p>{job.companyName}</p>
-                <div class="d-flex flex-column  gap-2">
+                <h4 onClick={handleapp}>company Name</h4>
+                <p onClick={handleapp}>{job.companyName}</p>
+                <div class="d-flex flex-column  gap-2" onClick={handleapp}>
                     <div className="col-xs-12">
                         <h4>field</h4>
                         <p>{job.field}</p>
@@ -98,14 +101,16 @@ function Jobs(){
                   <tbody>
                     {
                       jobs?.map((job,index)=>(
-                        <tr key={index} className="text-light">
-                          <td>{job.companyName}</td>
-                          <td>{job.position}</td>
+                        
+                        <tr key={index} className="text-light" style={{cursor:"pointer"}}>
+                          
+                          <td onClick={handleapp}>{job.companyName}</td>
+                          <td onClick={handleapp}>{job.position}</td>
                           <td><button className={job.status?"table_btn publish_btn":"bg-secondary table_btn text-light"}>
                             {job.status ? "opened":"closed"}
                             </button></td>
-                          <td>{job.date} <br/>{job.time}</td>
-                          <td>{job.application}</td>
+                          <td onClick={handleapp}>{job.date} <br/>{job.time}</td>
+                          <td onClick={handleapp}>{job.application}</td>
                           <td>
                           <Link href="">
                             <FontAwesomeIcon icon={faPenToSquare} className='color-yellow' />
@@ -115,6 +120,7 @@ function Jobs(){
                           </Link>
                           </td>
                     </tr>
+                    
                       ))
                     }
                   </tbody>

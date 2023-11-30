@@ -13,21 +13,19 @@ function PersonalPage(){
         
     <div class="exams m-3 container mx-auto">
         <div className='container mx-auto '>
-            <Title title={'student Panel'}/>
+            <Title title={'Instructor Portal'}/>
         </div>
         
     <div class="exams-container position-relative mt-3 ">
         <div className='d-flex justify-content-between container mb-5'>
-        <div className='fs-2 ' style={{fontWeight:"700"}}>
+        <div className='fs-2' style={{fontWeight:"700"}}>
         <span class=" text-uppercase text-white">welcome back </span>
         <span class="text-uppercase" style={{color:"#bf9b30"}}> tariq ali</span>
         </div>
         
         <Link to={"/profile"} class="text-white btn  btn 
              text-uppercase  view "
-             ><button class="navbar-toggler p-0 m-0" type="button"
-             data-bs-toggle = "collapse" data-bs-target = "#main" aria-controls="main" aria-expanded ="false"
-             aria-label="Toggle navigation">VIEW PROFILE</button></Link>
+             ><button class="navbar-toggler p-0 m-0 sm" type="button">VIEW PROFILE</button></Link>
         </div>
         
         
@@ -52,8 +50,8 @@ function PersonalPage(){
             </h5>
         </div>
 
-        <div class="row text-light mt-5 container mx-auto justify-content-between">
-            <div class="col-xs-12 col-md-5">
+        <div class="row text-light mt-5  container mx-auto justify-content-between">
+            <div class="col-xs-12 col-md-5 mb-3">
                 <h2 style={{fontWeight:"700"}}>Ongoing Courses</h2>
                 <div class="d-flex flex-column">
                 <div class="course mt-3 p-4">
@@ -130,19 +128,22 @@ function PersonalPage(){
                     </div>
                     <div >
                     <FontAwesomeIcon icon={faFileAlt}  style={{color:"#bf9b30"}}/><small> 12 lessons</small> 
-                    </div><Link to={"/StudentPanel/coursedetails"}>
+                    </div><div className='d-flex justify-content-between'>
+                    <div class="left_courses2 font-weight-bold d-md-none d-lg-none  d-xs-block d-sm-block
+              my-3 ml-2 sm">LEV.1</div>
+                    <Link to={"/StudentPanel/coursedetails"}>
                     <button class="ms-auto  rounded border-0 course_button mt-2 p-2 text-light">VIEW DETAILS</button></Link>
+                    
               </div>
               </div>
-              <div class="left_courses2 font-weight-bold d-md-none d-lg-none  d-xs-block d-sm-block
-              my-3 ml-2 ">LEV.1</div>
+              </div>
               </div>
           </div>
           <div class="col-sm-12 col-md-5 text-light">
             <div class="row parent_top_courses  course  ">
               <div class="col-xs-12 col-md-4 img_rel p-0 ">
                 <img class="sec3_img " src={img}/>
-                <p class="left_courses font-weight-bold d-none d-md-block  ">LEV.1</p>
+                <p class="left_courses font-weight-bold d-none d-md-block ">LEV.1</p>
               </div>
               <div class="col-xs-12 col-md-8 p-3 d-inline-flex flex-column ">
                 <h5>Python for Beginners</h5>
@@ -153,12 +154,16 @@ function PersonalPage(){
                     <div >
                     <FontAwesomeIcon icon={faFileAlt}  style={{color:"#bf9b30"}}/><small> 12 lessons</small> 
                     </div>
+                    <div className='d-flex justify-content-between'>
+                    <div class="left_courses2 font-weight-bold d-md-none d-lg-none  d-xs-block d-sm-block
+              my-3 ml-2 sm">LEV.1</div>
                     <Link to={"/StudentPanel/coursedetails"}>
                     <button class="ms-auto  rounded border-0 course_button mt-2 p-2 text-light">VIEW DETAILS</button></Link>
+                    
               </div>
               </div>
-              <div class="left_courses2 font-weight-bold d-md-none d-lg-none  d-xs-block d-sm-block
-              my-3 ml-2 ">LEV.1</div>
+              </div>
+              
               </div>
           </div>
         </div>
