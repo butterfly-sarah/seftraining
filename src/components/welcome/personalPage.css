@@ -81,6 +81,9 @@
     }
   }
   @media(max-width:550px){
+    .parent_top_courses{
+      margin: 0;
+    }
     .d-m-block{
       display: block;
     }

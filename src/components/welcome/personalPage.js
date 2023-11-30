@@ -10,7 +10,7 @@ function PersonalPage(){
 
     return(
         <>
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <div class="exams m-3 container mx-auto">
         <div className='container mx-auto '>
             <Title title={'Instructor Portal'}/>
@@ -111,10 +111,8 @@ function PersonalPage(){
         </div>
         <div class="mb-3 mt-5 container  text-light">
           <h4 style={{fontWeight:"700"}}>Upcoming Courses</h4>
-        </div>
-        <div class="row justify-content-center gap-3 z">
-            
-        <div class="col-xs-12 col-md-5 text-light">
+          <div class="row justify-content-around gap-3 z">
+          <div class="col-xs-12 col-md-5 text-light">
             <div class="row parent_top_courses  course  ">
               <div class="col-xs-12 col-md-4 img_rel p-0 ">
                 <img class="sec3_img " src={img}/>
@@ -163,10 +161,14 @@ function PersonalPage(){
               </div>
               </div>
               </div>
-              
               </div>
-          </div>
+              </div>
+              </div>
         </div>
+        
+            
+        
+              
         <Footer/>
         </>
     )
