@@ -79,32 +79,28 @@ const LoginComponent = () => {
                   <div className="container  mt-5">
                     <div className="row mt-1">
                       <div className="col-12">
-                        <div className="input-group mb-3">
-                          <span className="input-group-text">
+                        <div className="input-group mb-3 position-relative">
                             <FontAwesomeIcon
                               icon={faCircleUser}
-                              className="user-icon"
+                              className="user-icon position-absolute"
                             />
-                          </span>
                           <input
                             onChange={(e) => {
                               setuserid(e.target.value);
                             }}
                             type="text"
-                            className="form-control text-white"
+                            className="form-control text-white radui"
                             placeholder="User ID"
                             value={userid}
                           />
                         </div>
                       </div>
                       <div className="col-12">
-                        <div className="input-group position-relative mb-3">
-                          <span className="input-group-text">
+                        <div className="input-group position-relative mb-3 position-relative">
                             <FontAwesomeIcon
                               icon={faLock}
-                              className="lock-icon"
+                              className="lock-icon position-absolute"
                             />
-                          </span>
                           <input
                             onChange={(e) => {
                               setuserpassword(e.target.value);
@@ -115,18 +111,18 @@ const LoginComponent = () => {
                             value={userpassword}
                           />
                           <span
-                            className="input-group-text"
+                            className="position-absolute pas"
                             onClick={togglePassword}
                           >
                             {showPassword ? (
                               <FontAwesomeIcon
                                 icon={faEye}
-                                className="eye-icon position-absolute"
+                                className="eye-icon"
                               />
                             ) : (
                               <FontAwesomeIcon
                                 icon={faEyeSlash}
-                                className="eye-icon eye-slash position-absolute"
+                                className="eye-icon eye-slash"
                               />
                             )}
                           </span>
